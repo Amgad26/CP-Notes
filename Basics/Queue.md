@@ -127,6 +127,14 @@ auto cmp = [](pair<int,int>& a, pair<int,int>& b) {
     return a.second > b.second;
 };
 priority_queue<pair<int,int>, vector<pair<int,int>>, decltype(cmp)> pq(cmp);
+
+// Custom struct comparator
+struct Cmp {
+	bool operator()(const pair<int,int>& a, const pair<int,int>& b) const {
+		return a.first > b.first;
+	}
+};
+priority_queue<pair<int,int>, vector<pair<int,int>>, Cmp> pq2;
 ```
 
 ---
