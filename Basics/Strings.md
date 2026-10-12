@@ -148,6 +148,13 @@ toupper(st[2]);
 tolower(st[0]);
 ```
 
+### ends_with()
+```cpp
+bool ends_with(const string& str, const string& suffix) { 
+	if (suffix.length() > str.length()) return false;
+	return str.rfind(suffix) == (str.length() - suffix.length()); 
+}
+```
 ## Quick Reference Table
 
 |Method|Purpose|
